@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BugShot",
-  description: "Aplikacja do zgłaszania błędów.",
+  title: "Forma Studio — przedmioty do domu",
+  description: "Przedmioty do domu wybierane spokojnie i na dłużej.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
