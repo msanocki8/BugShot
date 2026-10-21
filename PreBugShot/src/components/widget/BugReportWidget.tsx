@@ -90,7 +90,7 @@ export default function BugReportWidget() {
             height,
             logging: false,
             scale: Math.min(window.devicePixelRatio || 1, 1.5),
-            scrollY: -window.scrollY,
+            scrollY: 0,
             useCORS: true,
             windowHeight: height,
             windowWidth: document.documentElement.clientWidth,
