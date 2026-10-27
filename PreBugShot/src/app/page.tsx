@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, UserRound } from "lucide-react";
 import BugReportWidget from "@/components/widget/BugReportWidget";
 
 const categories = [
@@ -50,9 +50,14 @@ export default function Home() {
         <nav className="flex gap-5 text-sm text-stone-700" aria-label="Kategorie produktów">
           {categories.map(([label, href]) => <a className="hover:text-green-800" href={href} key={label}>{label}</a>)}
         </nav>
-        <a className="flex items-center gap-2 text-sm text-stone-700 hover:text-green-800" href="#nowosci">
-          Zobacz kolekcję <ArrowRight size={15} />
-        </a>
+        <div className="flex items-center gap-5">
+          <a className="flex items-center gap-2 text-sm text-stone-700 hover:text-green-800" href="/konto">
+            <UserRound size={15} /> Moje konto
+          </a>
+          <a className="flex items-center gap-2 text-sm text-stone-700 hover:text-green-800" href="#nowosci">
+            Zobacz kolekcję <ArrowRight size={15} />
+          </a>
+        </div>
       </header>
 
       <main id="start" className="mx-auto max-w-6xl px-5">

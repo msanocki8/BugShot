@@ -16,9 +16,15 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Podgląd frontendu
+## Zgłoszenia błędów
 
-Panel pod adresem [http://localhost:3000/admin](http://localhost:3000/admin) oraz formularz zgłoszeń są na razie tylko podglądem frontendu. Demo logowania używa nicku `admin` i hasła `admin`; formularz niczego nie wysyła ani nie zapisuje. Backend zostanie dodany później.
+Formularz wysyła zgłoszenia do lokalnego API. Zgłoszenia są zapisywane w pliku `data/bug-reports.json`, razem z opisem i zrzutem ekranu. Panel jest dostępny pod adresem [http://localhost:3000/admin](http://localhost:3000/admin); demo logowania używa nicku `admin` i hasła `admin`.
+
+Panel pozwala wyszukiwać zgłoszenia, filtrować je po statusie i dacie, zmieniać statusy, dodawać komentarze i przeglądać historię. Do zgłoszenia dodawany jest adres strony (bez parametrów z adresu) oraz informacja o przeglądarce. Proste maskowanie ukrywa typowe zapisy haseł i tokenów w opisie oraz komentarzach, a pola hasła i tokenów są zasłaniane na zrzucie.
+
+Na stronie „Moje konto” jest przykładowy formularz logowania. Wpisz fikcyjne dane, otwórz „Zgłoś błąd” i sprawdź podgląd zrzutu: pole hasła powinno być zastąpione napisem `[ukryto]`. Logowanie nie wysyła ani nie zapisuje danych.
+
+To proste rozwiązanie do lokalnego projektu i prezentacji. Plik jest przechowywany na komputerze, na którym działa aplikacja. Logowanie w panelu jest tylko demonstracyjne i API nie ma prawdziwego uwierzytelniania; nie należy używać tego rozwiązania jako zabezpieczonej usługi.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
